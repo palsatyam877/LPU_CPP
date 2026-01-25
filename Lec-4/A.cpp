@@ -40,15 +40,6 @@ int main()
 
     // cout << x << " " << y << " " << z << "\n";
 
-    /*
-     void print(int *arr, int n)
-     {
-        for (int i = 0; i < n; i++)
-          cout << arr[i] << " ";
-        cout << endl;
-     }
-    */
-
     /**********Ques-5 ********/
     // int arr[5] = {1, 2, 3, 4, 5};
     // cout << arr << endl; // hex
@@ -60,38 +51,38 @@ int main()
     // cout << *(arr) * *(arr + 3) << endl; // 2 * 4 // 8
     // print(arr, 5); // 2 2 3 4 5
     // cout << ((*(arr + 1))-- + *(arr) * *(arr) ^ 5) << endl; // ((2)-- + 2 * 2 ^ 5) // (2 + 4 ^ 5) // 6 ^ 5 // 110 -> 6
-    // // (arr + 1)-- gives error (read Lvalues and Rvalues) // ++a++
+    // (arr + 1)-- gives error (read Lvalues and Rvalues) // ++a++
 
     /***********Ques-6*********/
-    // int x = 10, y = 50;
-    // int *p = &x; // hex add of x
-    // int **pp = &p; // hex add of p
-    // cout << x << " " << y << endl; // 10 50 C
-    // x = 15;
-    // cout << x << " " << y << endl; // 15 50 C
-    // *p = 20;
-    // cout << x << " " << y << endl; // 20 50 C
-    // **pp = 25;
-    // cout << x << " " << y << endl; // 25 50 C
-    // p = &y;
-    // cout << x << " " << y << endl; // 25 50 C
-    // *p = 55;
-    // cout << x << " " << y << endl; // 25 55 C
-    // **pp = 60;
-    // cout << x << " " << y << endl; // 25 60 C
-    // (*p)++;
+    int x = 10, y = 50;
+    int *p = &x; // hex add of x
+    int **pp = &p; // hex add of p
+    cout << x << " " << y << endl; // 10 50 C
+    x = 15;
+    cout << x << " " << y << endl; // 15 50 C
+    *p = 20;
+    cout << x << " " << y << endl; // 20 50 C
+    **pp = 25;
+    cout << x << " " << y << endl; // 25 50 C
+    p = &y;
+    cout << x << " " << y << endl; // 25 50 C
+    *p = 55;
+    cout << x << " " << y << endl; // 25 55 C
+    **pp = 60;
+    cout << x << " " << y << endl; // 25 60 C
+    (*p)++;
 
-    // cout << x << " " << y << endl; // 25 61 C
-    // (**pp)--;
-    // cout << x << " " << y << endl; // 25 60 C
-    // p--;
-    // cout << p << " " << *p << endl; // hex gar
+    cout << x << " " << y << endl; // 25 61 C
+    (**pp)--;
+    cout << x << " " << y << endl; // 25 60 C
+    p--;
+    cout << p << " " << *p << endl; // hex gar
 
-    // cout << x << " " << y << endl; // 25 60
-    // *pp = &x;
+    cout << x << " " << y << endl; // 25 60
+    *pp = &x;
 
-    // cout << x << " " << y << endl; // 25 60
-    // x = x + **pp + *p; 
-    // cout << x << " " << y << endl; // gar
+    cout << x << " " << y << endl; // 25 60
+    x = x + **pp + *p; 
+    cout << x << " " << y << endl; // gar
     return 0;
 }
