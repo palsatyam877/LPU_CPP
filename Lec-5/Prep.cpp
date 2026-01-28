@@ -138,10 +138,67 @@ int main()
 
 // https://leetcode.com/problems/plus-one/submissions/1897875826/?envType=problem-list-v2&envId=array
 // https://leetcode.com/problems/missing-number/?envType=problem-list-v2&envId=array
+/*
+    int missingNumber(vector<int>& nums) {
+        sort( nums.begin() , nums.end());
+
+        int n = nums.size();
+
+        for(int i = 0; i < n; ++i) {
+            if(nums[i] != i) 
+                return i; 
+        }
+
+        return n;
+    }
+
+*/
+
 // https://leetcode.com/problems/majority-element/description/?envType=problem-list-v2&envId=array
+
+/*
+    int majorityElement(vector<int>& nums) {
+        sort(nums.begin() , nums.end());
+        int n = nums.size();
+        int mid = (n / 2);  // floor( n / 2 ) 
+        return nums[mid];
+    }
+*/
+
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/1897917779/?envType=problem-list-v2&envId=array
 // ( explain them min() and max function and reimpliment the above function )
+
+/*
+    int maxProfit(vector<int>& prices) {
+         int mnn = prices[0] , maxProfit = 0;
+
+         for(int i = 1; i < prices.size(); ++i) {
+             int profit = prices[i] - mnn;
+
+             if(profit > maxProfit) {
+                maxProfit = profit;
+             }
+
+             if(mnn > prices[i]) 
+                mnn = prices[i];
+         }
+
+         return maxProfit;
+    }
+*/
+
 // https://leetcode.com/problems/merge-sorted-array/submissions/1897929256/?envType=problem-list-v2&envId=array
+
+/*
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        int inx = 0;
+        for(int i = m; i <= m + n - 1; ++i) 
+            nums1[i] = nums2[inx++];
+        
+        sort(nums1.begin() , nums1.end());
+    }
+*/
+
 // https://leetcode.com/problems/move-zeroes/description/?envType=problem-list-v2&envId=array
 // https://leetcode.com/problems/third-maximum-number/?envType=problem-list-v2&envId=array
 // https://leetcode.com/problems/intersection-of-two-arrays/submissions/1897973791/?envType=problem-list-v2&envId=array
