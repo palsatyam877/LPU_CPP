@@ -200,6 +200,27 @@ int main()
 */
 
 // https://leetcode.com/problems/move-zeroes/description/?envType=problem-list-v2&envId=array
+/*
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int inxL = 0 , inxR = 0;
+        int sz = nums.size();
+
+        for(int i = 0; i < sz; ++i) {
+            if(nums[inxR]) {
+                int temp = nums[inxL];
+                nums[inxL] = nums[inxR];
+                nums[inxR] = temp;
+
+                inxL++;
+            }
+
+            inxR++;
+        }
+    }
+};
+*/
 // https://leetcode.com/problems/third-maximum-number/?envType=problem-list-v2&envId=array
 // https://leetcode.com/problems/intersection-of-two-arrays/submissions/1897973791/?envType=problem-list-v2&envId=array
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array/?envType=problem-list-v2&envId=array
