@@ -222,6 +222,29 @@ public:
 };
 */
 // https://leetcode.com/problems/third-maximum-number/?envType=problem-list-v2&envId=array
+/*
+class Solution {
+public:
+    int thirdMax(vector<int>& nums) {
+        sort(nums.begin() , nums.end());
+
+        int sz = nums.size();
+        int cnt = 1;
+
+        for(int i = sz - 1; i > 0; --i) {
+            // int i = sz - 1;
+            if(nums[i] != nums[i - 1]) {
+                ++cnt;
+                if(cnt == 3) 
+                    return nums[i - 1];
+            }
+        }
+
+        return nums[sz - 1];
+    }
+};
+*/
+
 // https://leetcode.com/problems/intersection-of-two-arrays/submissions/1897973791/?envType=problem-list-v2&envId=array
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array/?envType=problem-list-v2&envId=array
 // https://leetcode.com/problems/pascals-triangle-ii/description/?envType=problem-list-v2&envId=array
